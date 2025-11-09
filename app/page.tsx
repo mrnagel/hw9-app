@@ -1,5 +1,8 @@
 import Image from "next/image";
-import Counter from "./count"
+import Counter from "./components/count"
+import Paragraph from "./components/paragraph"
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -11,12 +14,18 @@ export default function Home() {
             Matt Nagel's First Next.js
           </h1>
           <div>
-            <Counter countBy={1}/>
-            <Counter countBy={2}/>
+            <Counter backgroundColor="silver"/>
+            <Counter countBy={2} backgroundColor="dimgray"/>
           </div>
+
           <hr style={{ width: "90%", borderColor: 'cyan', borderWidth: '2px', margin: "2px" }}/>
           <div>
+            <Paragraph />
+          </div>
+          <hr style={{ width: "90%", borderColor: 'cyan', borderWidth: '2px', margin: "2px" }}/>
 
+          <div>
+            Check out my <Link href="/fakestore"><u>Fake Store</u></Link>
           </div>
         
         </div>
